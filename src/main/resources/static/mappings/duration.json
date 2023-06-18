@@ -1,0 +1,16 @@
+//{
+//  "properties" : {
+//    "id": {
+//      "type": "keyword"
+//    },
+//    "amountOfTime": {
+//      "type": "long"
+//    },
+//    "unit": {
+//      "type": "text"
+//    },
+//    "recipe":{
+//      "type": "Recipe"
+//    }
+//  }
+//}

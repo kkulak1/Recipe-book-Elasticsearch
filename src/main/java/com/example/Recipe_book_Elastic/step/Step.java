@@ -1,6 +1,8 @@
-package com.example.Recipe_book_Elastic.Recipe;
+package com.example.Recipe_book_Elastic.step;
 
+import com.example.Recipe_book_Elastic.Recipe.Recipe;
 import lombok.AllArgsConstructor;
+import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
@@ -9,19 +11,18 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 import org.springframework.data.elasticsearch.annotations.Setting;
 
-@Document(indexName = "recipe")
+@Document(indexName = "step")
 @Setting(settingPath = "static/es-settings.json")
 @Getter
 @Setter
 @AllArgsConstructor
-public class Recipe {
+public class Step {
     @Id
     @Field(type = FieldType.Keyword)
     private String id;
 
     @Field(type = FieldType.Text)
-    private String name;
+    private String steps;
 
-    @Field(type = FieldType.Text)
-    private String description;
+    private Recipe recipe;
 }

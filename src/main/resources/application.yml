@@ -4,3 +4,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
     region: eu-central-1
+
+server:
+  port: 49152
